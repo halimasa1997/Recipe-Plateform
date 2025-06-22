@@ -1,4 +1,3 @@
-# 🍳 TasteBud Recipes Platform
 
 # 🍽️ TasteBud Recipes Platform
 
