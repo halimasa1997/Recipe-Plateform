@@ -16,3 +16,35 @@
 <p align="center"> 
     <br> 
 </p>
+# 🍽️ Recipe Platform
+
+A modern platform for managing and discovering recipes, built with **N-Tier Architecture**.
+
+---
+
+## ✨ Features
+
+✅ **User Authentication & Authorization**
+- **Admin**
+  - Full CRUD (Create, Read, Update, Delete) for recipes and categories
+  - Manage users
+- **Registered User**
+  - Create, edit, delete own recipes
+  - Browse and search recipes
+- **Guest**
+  - View and search all recipes
+
+✅ **Recipe Management**
+- Categorize recipes (e.g., Desserts, Main Dishes, Appetizers)
+- Upload ingredients, steps, and images
+- Search by recipe name or category
+
+✅ **N-Tier Architecture**
+- **Presentation Layer**: ASP.NET Core MVC for the user interface
+- **Business Logic Layer**: Handles application rules and workflows
+- **Data Access Layer**: Entity Framework Core for database operations
+
+---
+
+## 🏛️ Project Architecture
+
