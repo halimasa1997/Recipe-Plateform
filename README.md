@@ -46,5 +46,5 @@ A modern platform for managing and discovering recipes, built with **N-Tier Arch
 
 ---
 
-## 🏛️ Project Architecture
+
 
