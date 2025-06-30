@@ -1,0 +1,5 @@
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.API\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.API\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.API\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.API\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.API\obj\Debug\net9.0\staticwebassets.build.json

@@ -1,0 +1,12 @@
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\bin\Debug\net9.0\RecipePlatform.Models.deps.json
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\bin\Debug\net9.0\RecipePlatform.Models.dll
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\bin\Debug\net9.0\RecipePlatform.Models.pdb
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.csproj.AssemblyReference.cache
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.AssemblyInfoInputs.cache
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.AssemblyInfo.cs
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.csproj.CoreCompileInputs.cache
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.dll
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\refint\RecipePlatform.Models.dll
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\RecipePlatform.Models.pdb
+C:\Users\user pc\Desktop\RecipeSharingPlatform.sln\RecipePlatform.Models\obj\Debug\net9.0\ref\RecipePlatform.Models.dll

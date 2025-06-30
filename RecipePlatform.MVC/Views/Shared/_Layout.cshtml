@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Recipe Platform</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-links">
+                    <span>🍳 Recipe Categories</span>
+                    <span>📺 Video Recipes</span>
+                    <span>📚 This Week's Recipes</span>
+                    <span>📞 Contact Us</span>
+                </div>
+                <div class="header-links">
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a asp-controller="Home" asp-action="Index" class="logo">
+                    <div class="logo-icon">🍽️</div>
+                    Recipe Platform
+                </a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a asp-controller="Home" asp-action="Index" class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")">Home</a></li>
+                        <li><a asp-controller="Recipes" asp-action="Index" class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Recipes" ? "active" : "")">Recipes</a></li>
+                        <li><a asp-controller="Categories" asp-action="Index">Categories</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li><a asp-controller="Recipes" asp-action="MyRecipes">My Recipes</a></li>
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li><a asp-controller="Admin" asp-action="Index">Admin</a></li>
+                        }
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    @if (!User.Identity.IsAuthenticated)
+                    {
+                        <div class="auth-buttons">
+                            <a asp-controller="Auth" asp-action="Login" class="btn btn-outline">Login</a>
+                            <a asp-controller="Recipes" asp-action="Create" class="btn btn-primary">Add Recipe</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="user-menu">
+                            <span>Welcome, @User.Identity.Name!</span>
+                            <form asp-controller="Auth" asp-action="Logout" method="post">
+                                <button type="submit" class="btn btn-primary">Logout</button>
+                            </form>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿@using RecipePlatform.MVC.Views.Home.ViewModels
+@model HomeViewModel
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>You don't know how to make the dish you have in mind?</h1>
+            <p>Feed your imagination and spark your creativity. From cravings to creations, let your ideas flourish and uncover the perfect recipe waiting to be discovered.</p>
+            <form asp-controller="Recipes" asp-action="Index" method="get" class="search-box">
+                <input type="text" name="search" placeholder="Find what do you want to cook today...">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div class="hero-image">
+            <img src="~/images/hero-food.jpg" alt="Delicious Recipe">
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories">
+    <div class="container">
+        <div class="section-title">
+            <h2>Recipe Categories</h2>
+            <p>Explore our diverse collection of recipe categories</p>
+        </div>
+      @* <div class="categories-grid">
+            @foreach (var category in Model.Categories)
+            {
+                <a asp-controller="Recipes" asp-action="Index" asp-route-categoryId="@category.CategoryId" class="category-card">
+                    <div class="category-icon">@category.Icon</div>
+                    <h3>@category.Name</h3>
+                    <p>@category.Description</p>
+                </a>
+            }
+        </div>
+    </div>*@
+</section>
+
+<!-- Featured Recipes Section -->
+<section class="featured-recipes">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured Recipes</h2>
+            <p>Discover the most loved recipes from our community</p>
+        </div>
+        <div class="recipes-grid">
+            @foreach (var recipe in Model.LatestRecipes)
+            {
+                <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.RecipeId" class="recipe-card">
+                    <div class="recipe-image">
+                        @*<img src="@recipe.ImageUrl" alt="@recipe.Title">*@ 
+                        <div class="recipe-badge">@recipe.Difficulty</div>
+                    </div>
+                    <div class="recipe-content">
+                        <div class="recipe-meta">
+                            <span>By @recipe.UserName</span>
+                            <span>@recipe.CreatedDate.ToShortDateString()</span>
+                        </div>
+                        <h3 class="recipe-title">@recipe.Title</h3>
+                        <p class="recipe-description">@recipe.Description</p>
+                        <div class="recipe-stats">
+                            <div class="recipe-rating">
+                                @for (int i = 1; i <= 5; i++)
+                                {
+                                    <i class="fas fa-star @(i <= recipe.AverageRating ? "active" : "")"></i>
+                                }
+                                <span>(@recipe.RatingCount)</span>
+                            </div>
+                            <div class="recipe-time">
+                                🕐 @((recipe.PrepTimeMinutes + recipe.CookTimeMinutes)) mins
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</section>
